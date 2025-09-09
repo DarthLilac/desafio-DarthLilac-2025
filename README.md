@@ -10,6 +10,21 @@
     Desafio técnico realizado por Andressa Rocha para StartDB
 </div>
 
+### TECNOLOGIAS UTILIZADAS
+
+Solução do desafio:
+  * Javascript;
+  * Node JS;
+  * Jest (testes).
+
+Interface de usuário:
+  * HTML;
+  * CSS.
+  
+<div align="center">
+  <img src="src/img/interface.png" alt="Interface">
+</div>
+
 ## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
 Para completar a etapa do desafio você terá que baixar a estrutura do código aqui na Azure, resolver o desafio usando Javascript e entregá-lo no repositório no seu github.
 

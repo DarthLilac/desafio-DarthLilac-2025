@@ -1,4 +1,14 @@
-# ABRIGO DE ANIMAIS
+<br />
+<div align="center">
+  <a href="https://github.com/DarthLilac/desafio-DarthLilac-2025">
+    <img src="src/img/abrigo-animais.png" alt="Logo" width="300" height="300">
+  </a>
+
+  <h1 align="center">Abrigo de Animais</h1>
+
+  <p align="center">
+    Desafio técnico realizado por Andressa Rocha para StartDB
+</div>
 
 ## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
 Para completar a etapa do desafio você terá que baixar a estrutura do código aqui na Azure, resolver o desafio usando Javascript e entregá-lo no repositório no seu github.

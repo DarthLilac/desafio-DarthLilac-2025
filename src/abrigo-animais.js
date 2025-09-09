@@ -53,29 +53,35 @@ class AbrigoAnimais {
     }
 
     encontraPessoas(brinquedosPessoa1, brinquedosPessoa2, ordemAnimais) {
-        const erro1 = this.validarEntrada(brinquedosPessoa1);
-        if (erro1) return { erro: erro1 };
+        let erros = [];
 
+        const erro1 = this.validarEntrada(brinquedosPessoa1);
         const erro2 = this.validarEntrada(brinquedosPessoa2);
-        if (erro2) return { erro: erro2 };
+        if (erro1 || erro2) {
+            erros.push('Brinquedo inválido');
+        }
 
         const ordemAnimaisArray = ordemAnimais.split(',').map(nome => nome.trim());
         const nomesValidos = new Set(animais.map(a => a.nome));
         const nomesEntrada = new Set(ordemAnimaisArray);
 
         if (nomesEntrada.size !== ordemAnimaisArray.length) {
-            return { erro: 'Animal inválido' };
+            erros.push('Animal inválido');
         }
 
         for (const nome of ordemAnimaisArray) {
             if (!nomesValidos.has(nome)) {
-                 const nomesValidosLower = new Set([...nomesValidos].map(n => n.toLowerCase()));
-                 if (!nomesValidosLower.has(nome.toLowerCase())) {
-                    return { erro: 'Animal inválido' };
-                 }
+                const nomesValidosLower = new Set([...nomesValidos].map(n => n.toLowerCase()));
+                if (!nomesValidosLower.has(nome.toLowerCase())) {
+                    erros.push('Animal inválido');
+                }
             }
         }
 
+        if (erros.length > 0) {
+            const mensagem = [...new Set(erros)].join(' e ');
+            return { erro: mensagem };
+        }
         let animaisAdotados = [];
         let adotadosP1 = 0;
         let adotadosP2 = 0;
